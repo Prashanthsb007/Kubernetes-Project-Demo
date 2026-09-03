@@ -4,12 +4,15 @@ Kubernetes-Project-Demo
 ## Install Docker
 
 ```
-sudo yum update -y
-sudo yum install -y docker
-sudo service docker start
-sudo usermod -aG docker ec2-user
+sudo apt update -
+sudo apt install -y docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker ubuntu
 newgrp docker
 docker --version
+
+sudo systemctl status docker
 ```
 
 ```
